@@ -1,0 +1,9 @@
+package com.myspace.spectrum;
+
+import java.lang.Number;
+
+rule "Valet Services"
+	dialect "mvel"
+	when
+	then
+end
