@@ -20,6 +20,10 @@ public class Patient implements java.io.Serializable {
 
 	private java.lang.Boolean hasUsedPortal;
 
+	private java.lang.Boolean offerCancellation;
+
+	private java.lang.Boolean notifyOfValetServices;
+
 	public Patient() {
 	}
 
@@ -71,16 +75,36 @@ public class Patient implements java.io.Serializable {
 		this.hasUsedPortal = hasUsedPortal;
 	}
 
+	public java.lang.Boolean getOfferCancellation() {
+		return this.offerCancellation;
+	}
+
+	public void setOfferCancellation(java.lang.Boolean offerCancellation) {
+		this.offerCancellation = offerCancellation;
+	}
+
+	public java.lang.Boolean getNotifyOfValetServices() {
+		return this.notifyOfValetServices;
+	}
+
+	public void setNotifyOfValetServices(java.lang.Boolean notifyOfValetServices) {
+		this.notifyOfValetServices = notifyOfValetServices;
+	}
+
 	public Patient(java.lang.Integer age, java.lang.Boolean isPregnant,
 			java.lang.Boolean isAdmitted,
 			com.myspace.spectrum.Appointment appointment,
-			java.lang.Boolean hasDisability, java.lang.Boolean hasUsedPortal) {
+			java.lang.Boolean hasDisability, java.lang.Boolean hasUsedPortal,
+			java.lang.Boolean offerCancellation,
+			java.lang.Boolean notifyOfValetServices) {
 		this.age = age;
 		this.isPregnant = isPregnant;
 		this.isAdmitted = isAdmitted;
 		this.appointment = appointment;
 		this.hasDisability = hasDisability;
 		this.hasUsedPortal = hasUsedPortal;
+		this.offerCancellation = offerCancellation;
+		this.notifyOfValetServices = notifyOfValetServices;
 	}
 
 }
