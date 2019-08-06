@@ -6,12 +6,23 @@ package com.myspace.spectrum;
 
 public class Patient_has_appointment_scheduled implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Patient_has_appointment_scheduled() {
-    }
+	private java.lang.String id;
 
+	public Patient_has_appointment_scheduled() {
+	}
 
+	public java.lang.String getId() {
+		return this.id;
+	}
 
+	public void setId(java.lang.String id) {
+		this.id = id;
+	}
+
+	public Patient_has_appointment_scheduled(java.lang.String id) {
+		this.id = id;
+	}
 
 }
