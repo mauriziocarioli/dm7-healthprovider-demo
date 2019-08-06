@@ -5,5 +5,7 @@ import java.lang.Number;
 rule "Cancellation"
 	dialect "mvel"
 	when
+		Patient( appointment.scheduled == true , hasUsedPortal == true , isAdmitted == true )
 	then
+		insert( new CancellationOffer() );
 end
