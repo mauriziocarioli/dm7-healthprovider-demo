@@ -2,10 +2,10 @@ package com.myspace.spectrum;
 
 import java.lang.Number;
 
-rule "Valet Services"
+rule "Valet"
 	dialect "mvel"
 	when
-		Patient( isPregnant == true , hasDisability == true , age > 65 , appointment.facility.hasValet == true , hasUsedPortal == true , appointment.date == ( $today ) , $today : appointment.today, appointment.scheduled == true , )
+		Patient( isPregnant == true , hasDisability == true , age > 65 , appointment.facility.hasValet == true , hasUsedPortal == true, appointment.scheduled == true )
 	then
 		insert( new NotificationOfValetServices() );
 end
