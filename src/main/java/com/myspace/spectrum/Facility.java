@@ -6,12 +6,23 @@ package com.myspace.spectrum;
 
 public class Facility implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Facility() {
-    }
+	private java.lang.Boolean hasValet;
 
+	public Facility() {
+	}
 
+	public java.lang.Boolean getHasValet() {
+		return this.hasValet;
+	}
 
+	public void setHasValet(java.lang.Boolean hasValet) {
+		this.hasValet = hasValet;
+	}
+
+	public Facility(java.lang.Boolean hasValet) {
+		this.hasValet = hasValet;
+	}
 
 }
