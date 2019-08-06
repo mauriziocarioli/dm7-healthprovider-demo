@@ -5,5 +5,6 @@ import java.lang.Number;
 rule "Valet Services"
 	dialect "mvel"
 	when
+		Patient( isPregnant == true , hasDisability == true , age > 65 , appointment.date > "06-Aug-2019" , appointment.facility.hasValet == true , hasUsedPortal == true )
 	then
 end
