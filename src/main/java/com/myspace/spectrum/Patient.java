@@ -10,6 +10,8 @@ public class Patient implements java.io.Serializable {
 
 	private java.lang.Integer age;
 
+	private java.lang.Boolean isPregnant;
+
 	public Patient() {
 	}
 
@@ -21,8 +23,17 @@ public class Patient implements java.io.Serializable {
 		this.age = age;
 	}
 
-	public Patient(java.lang.Integer age) {
+	public java.lang.Boolean getIsPregnant() {
+		return this.isPregnant;
+	}
+
+	public void setIsPregnant(java.lang.Boolean isPregnant) {
+		this.isPregnant = isPregnant;
+	}
+
+	public Patient(java.lang.Integer age, java.lang.Boolean isPregnant) {
 		this.age = age;
+		this.isPregnant = isPregnant;
 	}
 
 }
