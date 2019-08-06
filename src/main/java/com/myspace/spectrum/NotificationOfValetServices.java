@@ -6,12 +6,23 @@ package com.myspace.spectrum;
 
 public class NotificationOfValetServices implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public NotificationOfValetServices() {
-    }
+	private java.lang.String id;
 
+	public NotificationOfValetServices() {
+	}
 
+	public java.lang.String getId() {
+		return this.id;
+	}
 
+	public void setId(java.lang.String id) {
+		this.id = id;
+	}
+
+	public NotificationOfValetServices(java.lang.String id) {
+		this.id = id;
+	}
 
 }
