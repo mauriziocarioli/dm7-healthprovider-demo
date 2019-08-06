@@ -6,12 +6,23 @@ package com.myspace.spectrum;
 
 public class Patient_admitted_to_hospital implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Patient_admitted_to_hospital() {
-    }
+	private java.lang.String id;
 
+	public Patient_admitted_to_hospital() {
+	}
 
+	public java.lang.String getId() {
+		return this.id;
+	}
 
+	public void setId(java.lang.String id) {
+		this.id = id;
+	}
+
+	public Patient_admitted_to_hospital(java.lang.String id) {
+		this.id = id;
+	}
 
 }
