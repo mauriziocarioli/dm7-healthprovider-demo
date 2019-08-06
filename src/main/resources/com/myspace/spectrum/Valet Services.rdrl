@@ -5,7 +5,7 @@ import java.lang.Number;
 rule "Valet Services"
 	dialect "mvel"
 	when
-		Patient( isPregnant == true , hasDisability == true , age > 65 , appointment.facility.hasValet == true , hasUsedPortal == true , $today : appointment.today, scheduled == ( $today ) )
+		Patient( isPregnant == true , hasDisability == true , age > 65 , appointment.facility.hasValet == true , hasUsedPortal == true , appointment.date == ( $today ) , $today : appointment.today, appointment.scheduled == true , )
 	then
 		insert( new NotificationOfValetServices() );
 end
