@@ -17,6 +17,8 @@ public class Appointment implements java.io.Serializable {
 	private com.myspace.spectrum.Facility facility;
 	private java.lang.Long daysToAppointment;
 
+	private java.lang.Boolean cancellationOffer;
+
 	public Appointment() {
 	}
 
@@ -45,8 +47,9 @@ public class Appointment implements java.io.Serializable {
 	}
 
 	public java.lang.Long getDaysToAppointment() {
-	    LocalDate today = LocalDate.now();
-	    LocalDate appointmentDate = this.date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		LocalDate today = LocalDate.now();
+		LocalDate appointmentDate = this.date.toInstant()
+				.atZone(ZoneId.systemDefault()).toLocalDate();
 		return ChronoUnit.DAYS.between(today, appointmentDate);
 	}
 
@@ -54,13 +57,23 @@ public class Appointment implements java.io.Serializable {
 		this.daysToAppointment = daysToAppointment;
 	}
 
+	public java.lang.Boolean getCancellationOffer() {
+		return this.cancellationOffer;
+	}
+
+	public void setCancellationOffer(java.lang.Boolean cancellationOffer) {
+		this.cancellationOffer = cancellationOffer;
+	}
+
 	public Appointment(java.lang.Boolean scheduled, java.util.Date date,
 			com.myspace.spectrum.Facility facility,
-			java.lang.Long daysToAppointment) {
+			java.lang.Long daysToAppointment,
+			java.lang.Boolean cancellationOffer) {
 		this.scheduled = scheduled;
 		this.date = date;
 		this.facility = facility;
 		this.daysToAppointment = daysToAppointment;
+		this.cancellationOffer = cancellationOffer;
 	}
 
 }
