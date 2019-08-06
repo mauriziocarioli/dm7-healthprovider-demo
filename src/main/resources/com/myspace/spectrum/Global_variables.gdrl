@@ -1,3 +1,0 @@
-package com.myspace.spectrum;
-
-global java.lang.Integer patient_age;
