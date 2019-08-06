@@ -19,6 +19,8 @@ public class Appointment implements java.io.Serializable {
 
 	private java.lang.Boolean cancellationOffer;
 
+	private java.lang.Boolean valetServicesNotification;
+
 	public Appointment() {
 	}
 
@@ -65,15 +67,26 @@ public class Appointment implements java.io.Serializable {
 		this.cancellationOffer = cancellationOffer;
 	}
 
+	public java.lang.Boolean getValetServicesNotification() {
+		return this.valetServicesNotification;
+	}
+
+	public void setValetServicesNotification(
+			java.lang.Boolean valetServicesNotification) {
+		this.valetServicesNotification = valetServicesNotification;
+	}
+
 	public Appointment(java.lang.Boolean scheduled, java.util.Date date,
 			com.myspace.spectrum.Facility facility,
 			java.lang.Long daysToAppointment,
-			java.lang.Boolean cancellationOffer) {
+			java.lang.Boolean cancellationOffer,
+			java.lang.Boolean valetServicesNotification) {
 		this.scheduled = scheduled;
 		this.date = date;
 		this.facility = facility;
 		this.daysToAppointment = daysToAppointment;
 		this.cancellationOffer = cancellationOffer;
+		this.valetServicesNotification = valetServicesNotification;
 	}
 
 }
