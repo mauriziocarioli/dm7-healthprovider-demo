@@ -7,5 +7,6 @@ rule "Cancellation"
 	when
 		Patient( appointment.scheduled == true , hasUsedPortal == true , isAdmitted == true )
 	then
-		insert( new CancellationOffer() );
+		CancellationOffer $cancellation = new CancellationOffer();
+		insert( $cancellation );
 end
