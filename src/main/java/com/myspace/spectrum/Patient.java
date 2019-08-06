@@ -12,6 +12,12 @@ public class Patient implements java.io.Serializable {
 
 	private java.lang.Boolean isPregnant;
 
+	private java.lang.Boolean isAdmitted;
+
+	private com.myspace.spectrum.Appointment appointment;
+
+	private java.lang.Boolean hasDisability;
+
 	public Patient() {
 	}
 
@@ -31,9 +37,39 @@ public class Patient implements java.io.Serializable {
 		this.isPregnant = isPregnant;
 	}
 
-	public Patient(java.lang.Integer age, java.lang.Boolean isPregnant) {
+	public java.lang.Boolean getIsAdmitted() {
+		return this.isAdmitted;
+	}
+
+	public void setIsAdmitted(java.lang.Boolean isAdmitted) {
+		this.isAdmitted = isAdmitted;
+	}
+
+	public com.myspace.spectrum.Appointment getAppointment() {
+		return this.appointment;
+	}
+
+	public void setAppointment(com.myspace.spectrum.Appointment appointment) {
+		this.appointment = appointment;
+	}
+
+	public java.lang.Boolean getHasDisability() {
+		return this.hasDisability;
+	}
+
+	public void setHasDisability(java.lang.Boolean hasDisability) {
+		this.hasDisability = hasDisability;
+	}
+
+	public Patient(java.lang.Integer age, java.lang.Boolean isPregnant,
+			java.lang.Boolean isAdmitted,
+			com.myspace.spectrum.Appointment appointment,
+			java.lang.Boolean hasDisability) {
 		this.age = age;
 		this.isPregnant = isPregnant;
+		this.isAdmitted = isAdmitted;
+		this.appointment = appointment;
+		this.hasDisability = hasDisability;
 	}
 
 }
