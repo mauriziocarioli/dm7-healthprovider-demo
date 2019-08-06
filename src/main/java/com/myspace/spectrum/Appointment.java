@@ -47,7 +47,7 @@ public class Appointment implements java.io.Serializable {
 	public java.lang.Long getDaysToAppointment() {
 	    LocalDate today = LocalDate.now();
 	    LocalDate appointmentDate = this.date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-		return this.daysToAppointment;
+		return ChronoUnit.DAYS.between(today, appointmentDate);
 	}
 
 	public void setDaysToAppointment(java.lang.Long daysToAppointment) {
@@ -56,7 +56,7 @@ public class Appointment implements java.io.Serializable {
 
 	public Appointment(java.lang.Boolean scheduled, java.util.Date date,
 			com.myspace.spectrum.Facility facility,
-			java.lang.Integer daysToAppointment) {
+			java.lang.Long daysToAppointment) {
 		this.scheduled = scheduled;
 		this.date = date;
 		this.facility = facility;
