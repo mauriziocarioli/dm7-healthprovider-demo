@@ -18,6 +18,8 @@ public class Patient implements java.io.Serializable {
 
 	private java.lang.Boolean hasDisability;
 
+	private java.lang.Boolean hasUsedPortal;
+
 	public Patient() {
 	}
 
@@ -61,15 +63,24 @@ public class Patient implements java.io.Serializable {
 		this.hasDisability = hasDisability;
 	}
 
+	public java.lang.Boolean getHasUsedPortal() {
+		return this.hasUsedPortal;
+	}
+
+	public void setHasUsedPortal(java.lang.Boolean hasUsedPortal) {
+		this.hasUsedPortal = hasUsedPortal;
+	}
+
 	public Patient(java.lang.Integer age, java.lang.Boolean isPregnant,
 			java.lang.Boolean isAdmitted,
 			com.myspace.spectrum.Appointment appointment,
-			java.lang.Boolean hasDisability) {
+			java.lang.Boolean hasDisability, java.lang.Boolean hasUsedPortal) {
 		this.age = age;
 		this.isPregnant = isPregnant;
 		this.isAdmitted = isAdmitted;
 		this.appointment = appointment;
 		this.hasDisability = hasDisability;
+		this.hasUsedPortal = hasUsedPortal;
 	}
 
 }
