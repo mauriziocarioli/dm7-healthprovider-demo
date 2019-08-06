@@ -14,10 +14,8 @@ public class Appointment implements java.io.Serializable {
 
 	private java.lang.Boolean scheduled;
 	private java.util.Date date;
-
 	private com.myspace.spectrum.Facility facility;
-
-	private java.lang.Integer daysToAppointment;
+	private java.lang.Long daysToAppointment;
 
 	public Appointment() {
 	}
@@ -46,13 +44,13 @@ public class Appointment implements java.io.Serializable {
 		this.facility = facility;
 	}
 
-	public java.lang.Integer getDaysToAppointment() {
+	public java.lang.Long getDaysToAppointment() {
 	    LocalDate today = LocalDate.now();
 	    LocalDate appointmentDate = this.date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 		return this.daysToAppointment;
 	}
 
-	public void setDaysToAppointment(java.lang.Integer daysToAppointment) {
+	public void setDaysToAppointment(java.lang.Long daysToAppointment) {
 		this.daysToAppointment = daysToAppointment;
 	}
 
