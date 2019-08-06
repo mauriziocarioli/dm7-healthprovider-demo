@@ -1,0 +1,9 @@
+package com.myspace.spectrum;
+
+import java.lang.Number;
+
+rule "Cancellation"
+	dialect "mvel"
+	when
+	then
+end
