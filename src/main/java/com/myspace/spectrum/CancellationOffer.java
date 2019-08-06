@@ -6,12 +6,23 @@ package com.myspace.spectrum;
 
 public class CancellationOffer implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public CancellationOffer() {
-    }
+	private java.lang.String id;
 
+	public CancellationOffer() {
+	}
 
+	public java.lang.String getId() {
+		return this.id;
+	}
 
+	public void setId(java.lang.String id) {
+		this.id = id;
+	}
+
+	public CancellationOffer(java.lang.String id) {
+		this.id = id;
+	}
 
 }
