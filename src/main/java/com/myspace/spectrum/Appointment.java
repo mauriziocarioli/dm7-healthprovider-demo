@@ -11,6 +11,8 @@ public class Appointment implements java.io.Serializable {
 	private java.lang.Boolean scheduled;
 	private java.util.Date date;
 
+	private com.myspace.spectrum.Facility facility;
+
 	public Appointment() {
 	}
 
@@ -30,9 +32,19 @@ public class Appointment implements java.io.Serializable {
 		this.date = date;
 	}
 
-	public Appointment(java.lang.Boolean scheduled, java.util.Date date) {
+	public com.myspace.spectrum.Facility getFacility() {
+		return this.facility;
+	}
+
+	public void setFacility(com.myspace.spectrum.Facility facility) {
+		this.facility = facility;
+	}
+
+	public Appointment(java.lang.Boolean scheduled, java.util.Date date,
+			com.myspace.spectrum.Facility facility) {
 		this.scheduled = scheduled;
 		this.date = date;
+		this.facility = facility;
 	}
 
 }
