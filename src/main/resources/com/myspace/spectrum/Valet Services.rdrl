@@ -7,4 +7,5 @@ rule "Valet"
 	when
 		$patient : Patient( isPregnant == true , hasDisability == true , age > 65 , appointment.facility.hasValet == true , hasUsedPortal == true , appointment.scheduled == true , appointment.daysToAppointment == 1 )
 	then
+		$patient.setNotifyOfValetServices( true );
 end
